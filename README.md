@@ -1,76 +1,126 @@
-📌 Movie Success Prediction 
-🎯 Project Objective
+# 🎬 Movie Success Prediction – Data Analytics Project
 
-The aim of this project is to predict the success of movies based on various features such as budget, genre, cast, production house, runtime, social media engagement, and audience sentiments.
-The model helps production houses estimate expected revenue / success score before release.
+## 📌 Project Overview
 
-🧠 Tech Stack Used
-Area	Tools / Libraries
-Programming	Python
-Data Analysis	Pandas, NumPy
-Visualization	Matplotlib, Seaborn
-Model Building	Scikit-learn
-NLP (if sentiment used)	TextBlob
-IDE Used	VS Code / Jupyter Notebook
+This project aims to **predict the success of movies** using **data analytics and machine learning techniques**.
+The model evaluates various influencing factors such as budget, cast, director, genre, runtime, ratings, social buzz, and audience sentiments to estimate overall success in terms of **Revenue / IMDB Rating / Popularity Score**.
 
-📂 Project Folder Structure
+---
+
+## 🚀 Key Objectives
+
+* Identify major factors that impact movie success
+* Perform **exploratory data analysis (EDA)**
+* Build ML models to predict movie performance
+* Visualize trends and insights for better decision-making
+* Provide actionable inputs for film production and marketing teams
+
+---
+
+## 📂 Project Structure
+
+```
 Movie_Prediction/
-│── dataset/                ← Raw & cleaned dataset
-│── screenshots/            ← Output & visualization images
-│── movie_prediction.py     ← Main ML code
-│── model.pkl               ← Saved trained model
-│── README.md               ← Project documentation
-│── requirements.txt        ← Dependencies
+│
+├── dataset/                  # Raw & cleaned datasets
+├── notebooks/                # EDA and ML Jupyter notebooks
+├── src/                      # Model training and utility scripts
+├── saved_models/             # Trained ML models
+├── dashboard/                # Power BI visualizations (PDF / PBIX)
+├── screenshots/              # Output & result screenshots
+├── README.md                 # Documentation file
+└── requirements.txt          # Python dependencies
+```
 
-🔍 Workflow of the Project
+---
 
-1️⃣ Import and inspect dataset
-2️⃣ Data cleaning & handling missing values
-3️⃣ Feature engineering & encoding categorical data
-4️⃣ Train/test split
-5️⃣ Train multiple ML models (Linear Regression, Random Forest etc.)
-6️⃣ Evaluate performance using RMSE & R² score
-7️⃣ Visualize patterns and correlations
-8️⃣ Export trained model
+## 🧠 Machine Learning Models Used
 
-📊 Dataset Summary
-Total Rows	Final Rows After Cleaning	Total Features
-1000	838	12
-📈 Model Performance
-RMSE  : 75.666
-R² Score : 0.84 (approx)
+| Model                   | Performance               |
+| ----------------------- | ------------------------- |
+| Linear Regression       | Good baseline performance |
+| Random Forest Regressor | Best accuracy             |
+| XGBoost                 | Competitive and stable    |
+| Decision Tree           | Moderate results          |
 
-🖥 Output Screenshots
+🔹 Final chosen model: **Random Forest (best R² score)**
+🔹 RMSE score: **75.666**
 
-Screenshots of:
-✔ Dataset
-✔ Correlation heatmap
-✔ Model performance
-✔ Prediction results
+---
 
-(Attached inside screenshots/ folder)
+## 📊 Tech Stack & Libraries
 
-🚀 How to Run the Project
-1️⃣ Install required libraries
+| Category              | Tools                       |
+| --------------------- | --------------------------- |
+| Programming           | Python                      |
+| ML                    | Scikit-Learn, XGBoost       |
+| Data Analysis         | NumPy, Pandas               |
+| Visualization         | Matplotlib, Seaborn, Plotly |
+| Dashboard             | Power BI                    |
+| Deployment (optional) | Streamlit / Flask           |
+
+---
+
+## 🔍 Insights from the Project
+
+✔ Higher budgets correlate with higher box-office success
+✔ Genres like Action, Thriller & Sci-Fi perform best commercially
+✔ IMDB ratings and social buzz strongly influence performance
+✔ Starcast influence varies — a strong marketing strategy is equally important
+
+---
+
+## 📈 Dashboard
+
+A **Power BI dashboard** was created to visualize:
+
+* Genre-wise movie performance
+* Rating distribution
+* Revenue by year
+* Correlation heatmap of key factors
+
+(`dashboard/` folder contains PBIX + PDF export)
+
+---
+
+## ▶️ How to Run the Project
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/yourusername/Movie_Prediction.git
+```
+
+### 2️⃣ Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-2️⃣ Run the model
-python movie_prediction.py
+### 3️⃣ Run the model
 
-3️⃣ Predict revenue / success (example)
-Enter Budget: 120000000
-Enter Runtime: 145
-Enter IMDB Rating: 8.1
-Prediction → Expected Business: ₹256 Crores
+```bash
+python src/model_train.py
+```
 
-📌 Applications of the Project
+### 4️⃣ Predict with new data
 
-🔹 Predict success before release
-🔹 Planning & strategy for production houses
-🔹 Business decision support for investors
-🔹 Improve script / marketing / cast decisions
+```bash
+python src/predict.py
+```
 
-🧑‍💻 Developer
+---
 
-👤 Raj Shinde
-Data Analytics Enthusiast
+## 📌 Future Enhancements
+
+🔹 Deploy prediction system as a Web App
+🔹 Use deep learning for trailers sentiment + NLP screenplay analysis
+🔹 Add Hindi / Multilingual movie dataset
+
+---
+
+## 💡 Author
+
+👤 **Raj Shinde**
+📧 *[rajudayshinde@gmail.com ]*
+
